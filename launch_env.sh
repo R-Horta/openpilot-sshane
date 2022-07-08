@@ -15,5 +15,5 @@ if [ -z "$PASSIVE" ]; then
 fi
 
 export SKIP_FW_QUERY=1
-export FINGERPRINT="TOYOTA COROLLA TSS2 2019"
+export FINGERPRINT="TOYOTA COROLLA HYBRID TSS2 2019"
 export STAGING_ROOT="/data/safe_staging"
