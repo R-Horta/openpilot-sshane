@@ -1,3 +1,48 @@
+
+
+# ABOUT THIS FORK
+
+This fork enables Stop and Go in global vehicles based on Toyota Safet Sense 2. (Thanks to Virtually Chris, Shane Smiskol, @mlp, Grekiki, Alexandre Sato, Gravyfries and @Sunnyhaibin)
+
+it also has the steering wheel button to change the distance of follow running (thanks @Krkeegan).
+
+WARNING: The essence of the concept of this fork is to be quick at startup to exploit on Toyota's PCM-Cruise. Therefore the fingerprint process is done by hard-coding to the detriment of the dynamic process that has been suppressed. 
+SO if your vehicle is different from "TOYOTA COROLLA HYBRID TSS2 2019" you will need to update the launch_env.sh file exactly as the description of your vehicle is written in values.py
+
+Example: If my corolla is not hybrid i need do a ssh and:
+```
+echo 'export FINGERPRINT="TOYOTA COROLLA TSS2 2019"' >> launch_env.sh
+```
+The first engine start is expected to show a cruise fault error, just ignore it and wait 30 seconds with the engine off and only then start again. This error should happen only in the first match and then no longer repeat itself.
+
+If your TSS2 corolla is hybrid equal to mine you can proceed a format factory (turning off your c2 and turning on by holding down the volume increase button) and then instead of putting ```https://openpilot.comma.ai``` in the custom fork installation url use ``` installer.comma.ai/alexandresato/master```
+
+Now if you already know how to perform a ssh (if you do not know how to learn at: https://github.com/commaai/openpilot/wiki/SSH) run this command:
+```cd /data/openpilot; scons --clean; cd ..; rm -rf openpilot; git clone --recurse-submodules https://github.com/alexandresato/openpilot; reboot```
+
+
+💰 Donate 💰
+---
+
+If you find any of the features useful, feel free to donate to support for future feature development.
+
+Thank you for your continuous love and support! Enjoy 🥰
+
+**PayPal:**
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=JN4E8PTL4QBZG" target="_blank">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal this" title="PayPal - The safer, easier way to pay online!" border="0" />
+</a>
+<br></br>
+
+**PayPal QR Code:**
+
+![Paypall.png.png](Paypall.png)
+
+
+
+this fork is based in:
+
 # Stock Additions - [2022-04-22](/SA_RELEASES.md) (0.8.14)
 
 Stock Additions is a fork of openpilot designed to be minimal in design while boasting various feature additions and behavior improvements over stock. I have a 2017 Toyota Corolla with comma pedal, so most of my changes are designed to improve the longitudinal performance.
