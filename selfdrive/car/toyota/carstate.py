@@ -114,7 +114,6 @@ class CarState(CarStateBase):
       self.acc_type = cp.vl["ACC_CONTROL"]["ACC_TYPE"]
       ret.stockFcw = bool(cp.vl["ACC_HUD"]["FCW"])
     elif self.CP.carFingerprint in TSS2_CAR:
-      self.acc_type = cp_cam.vl["ACC_CONTROL"]["ACC_TYPE"]
       ret.stockFcw = bool(cp_cam.vl["ACC_HUD"]["FCW"])
 
     if self.enable_distance_btn:
