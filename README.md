@@ -13,8 +13,6 @@ Example: If my corolla is not hybrid i need do a ssh and:
 ```
 echo 'export FINGERPRINT="TOYOTA COROLLA TSS2 2019"' >> launch_env.sh
 ```
-The first engine start is expected to show a cruise fault error, just ignore it and wait 30 seconds with the engine off and only then start again. This error should happen only in the first match and then no longer repeat itself.
-
 If your TSS2 corolla is hybrid equal to mine you can proceed a ssh (if you do not know how to learn at: https://github.com/commaai/openpilot/wiki/SSH or/and install https://github.com/spektor56/openpilotToolkit) and then run this command:
 ```cd /data/openpilot; scons --clean; cd ..; rm -rf openpilot; git clone --recurse-submodules -b SA-master-updated --single-branch https://github.com/alexandresato/openpilot-sshane.git openpilot; sudo reboot```
 
