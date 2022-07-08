@@ -14,4 +14,6 @@ if [ -z "$PASSIVE" ]; then
   export PASSIVE="1"
 fi
 
+export SKIP_FW_QUERY=1
+export FINGERPRINT="TOYOTA COROLLA TSS2 2019"
 export STAGING_ROOT="/data/safe_staging"
